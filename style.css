@@ -1,115 +1,79 @@
 body{
-
 font-family:Arial;
-background:#f1f4f9;
+background:#f2f5f9;
 display:flex;
 justify-content:center;
 padding:40px;
-
 }
 
 .container{
-
 background:white;
 width:650px;
 padding:40px;
 border-radius:10px;
-box-shadow:0 15px 40px rgba(0,0,0,0.1);
-
-}
-
-.logo{
-
-height:70px;
-display:block;
-margin:auto;
-
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 header{
-
 text-align:center;
 margin-bottom:25px;
-
 }
 
 .progress-container{
-
-height:10px;
+height:8px;
 background:#eee;
 border-radius:5px;
-margin-bottom:25px;
-
+margin-bottom:20px;
 }
 
 .progress-bar{
-
-height:10px;
+height:8px;
 width:0%;
 background:#4CAF50;
+transition:0.3s;
 border-radius:5px;
-transition:0.4s;
-
 }
 
 .step{
-
 display:none;
-
 }
 
 .step.active{
-
 display:block;
-
 }
 
 input,textarea{
-
 width:100%;
-padding:12px;
+padding:10px;
 margin:10px 0;
 border:1px solid #ccc;
-border-radius:6px;
-
+border-radius:5px;
 }
 
 textarea{
-
 height:100px;
-
 }
 
 .buttons{
-
 display:flex;
 justify-content:space-between;
-
 }
 
 button{
-
-padding:12px 25px;
+padding:10px 20px;
 border:none;
 background:#4CAF50;
 color:white;
 border-radius:5px;
 cursor:pointer;
-
 }
 
 button:hover{
-
 background:#43a047;
-
 }
+
 @media (max-width:768px){
-    .container{
-        width: 90%;
-        padding: 20px;
-    }
-    button{
-        width: 100%;
-        margin-top: 10px;
-    }
+.container{
+width:95%;
+}
 }
