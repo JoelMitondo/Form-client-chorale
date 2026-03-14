@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Client - Création Site Web Chorale</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <header>
+        <img src="logo-agence.png" class="logo">
+        <h1>Formulaire de création de site web</h1>
+        <p>
+        Ce formulaire nous permettra de collecter toutes les informations nécessaires
+        pour concevoir le site internet de votre chorale.  
+        Merci de répondre avec précision afin de nous aider à créer un site qui
+        correspond parfaitement à vos attentes.
+        </p>
+
+    </header>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <form id="form">
+    <!-- STEP 1 -->
+        <div class="step active">
+            <h2>Informations générales</h2>
+
+            <label>Nom de la chorale</label>
+            <input type="text" name="nom">
+
+            <label>Année de création</label>
+            <input type="text" name="annee">
+
+            <label>Fondateur</label>
+            <input type="text" name="fondateur">
+
+            <label>Nombre de choristes</label>
+            <input type="number" name="choristes">
+
+            <button type="button" class="next">Suivant</button>
+
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step">
+
+            <h2>Objectifs du site</h2>
+
+            <label>Pourquoi souhaitez-vous un site web ?</label>
+            <textarea name="objectif"></textarea>
+
+            <label>Public ciblé</label>
+            <input type="text" name="public">
+
+            <label>Que voulez-vous que les visiteurs puissent faire ?</label>
+            <textarea name="actions"></textarea>
+
+            <div class="buttons">
+                <button type="button" class="prev">Retour</button>
+                <button type="button" class="next">Suivant</button>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step">
+            <h2>Contenus disponibles</h2>
+
+            <label>Logo de la chorale</label>
+            <input type="file" name="logo">
+
+            <label>Photos</label>
+            <input type="file" multiple name="photos">
+
+            <label>Vidéos</label>
+            <input type="file" multiple name="videos">
+
+            <div class="buttons">
+
+                <button type="button" class="prev">Retour</button>
+                <button type="button" class="next">Suivant</button>
+            </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="step">
+            <h2>Design du site</h2>
+
+            <label>Couleurs préférées</label>
+            <input type="text" name="couleurs">
+
+            <label>Sites web que vous aimez</label>
+            <textarea name="exemples"></textarea>
+
+            <label>Réseaux sociaux</label>
+            <input type="text" name="reseaux">
+
+            <div class="buttons">
+
+                <button type="button" class="prev">Retour</button>
+                <button type="submit">Envoyer le formulaire</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
