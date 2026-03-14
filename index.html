@@ -1,113 +1,125 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire Client - Création Site Web Chorale</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Formulaire Création Site Web</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
 
 <div class="container">
-    <header>
-        <img src="logo-agence.png" class="logo">
-        <h1>Formulaire de création de site web</h1>
-        <p>
-        Ce formulaire nous permettra de collecter toutes les informations nécessaires
-        pour concevoir le site internet de votre chorale.  
-        Merci de répondre avec précision afin de nous aider à créer un site qui
-        correspond parfaitement à vos attentes.
-        </p>
 
-    </header>
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
+<header>
 
-    <form id="form">
-    <!-- STEP 1 -->
-        <div class="step active">
-            <h2>Informations générales</h2>
+<h1>Demande de création de site web</h1>
 
-            <label>Nom de la chorale</label>
-            <input type="text" name="nom">
+<p>
+Ce formulaire nous permettra de recueillir toutes les informations nécessaires
+pour concevoir votre site web.
+</p>
 
-            <label>Année de création</label>
-            <input type="text" name="annee">
+</header>
 
-            <label>Fondateur</label>
-            <input type="text" name="fondateur">
+<div class="progress-container">
+<div class="progress-bar" id="progressBar"></div>
+</div>
 
-            <label>Nombre de choristes</label>
-            <input type="number" name="choristes">
+<form id="form">
 
-            <button type="button" class="next">Suivant</button>
+<!-- STEP 1 -->
+<div class="step active">
 
-        </div>
+<h2>Informations du responsable</h2>
 
-        <!-- STEP 2 -->
-        <div class="step">
+<label>Nom complet</label>
+<input type="text" name="nom" required>
 
-            <h2>Objectifs du site</h2>
+<label>Email</label>
+<input type="email" name="email" required>
 
-            <label>Pourquoi souhaitez-vous un site web ?</label>
-            <textarea name="objectif"></textarea>
+<label>Téléphone</label>
+<input type="tel" name="telephone" required>
 
-            <label>Public ciblé</label>
-            <input type="text" name="public">
+<button type="button" class="next">Suivant</button>
 
-            <label>Que voulez-vous que les visiteurs puissent faire ?</label>
-            <textarea name="actions"></textarea>
+</div>
 
-            <div class="buttons">
-                <button type="button" class="prev">Retour</button>
-                <button type="button" class="next">Suivant</button>
-            </div>
-        </div>
 
-        <!-- STEP 3 -->
-        <div class="step">
-            <h2>Contenus disponibles</h2>
+<!-- STEP 2 -->
+<div class="step">
 
-            <label>Logo de la chorale</label>
-            <input type="file" name="logo">
+<h2>Informations sur la chorale</h2>
 
-            <label>Photos</label>
-            <input type="file" multiple name="photos">
+<label>Nom de la chorale</label>
+<input type="text" name="chorale">
 
-            <label>Vidéos</label>
-            <input type="file" multiple name="videos">
+<label>Année de création</label>
+<input type="text" name="annee">
 
-            <div class="buttons">
+<label>Nombre de choristes</label>
+<input type="number" name="choristes">
 
-                <button type="button" class="prev">Retour</button>
-                <button type="button" class="next">Suivant</button>
-            </div>
-        </div>
+<div class="buttons">
 
-        <!-- STEP 4 -->
-        <div class="step">
-            <h2>Design du site</h2>
+<button type="button" class="prev">Retour</button>
+<button type="button" class="next">Suivant</button>
 
-            <label>Couleurs préférées</label>
-            <input type="text" name="couleurs">
+</div>
 
-            <label>Sites web que vous aimez</label>
-            <textarea name="exemples"></textarea>
+</div>
 
-            <label>Réseaux sociaux</label>
-            <input type="text" name="reseaux">
 
-            <div class="buttons">
+<!-- STEP 3 -->
+<div class="step">
 
-                <button type="button" class="prev">Retour</button>
-                <button type="submit">Envoyer le formulaire</button>
-            </div>
-        </div>
-    </form>
+<h2>Objectif du site</h2>
+
+<label>Pourquoi voulez-vous un site web ?</label>
+<textarea name="objectif"></textarea>
+
+<label>Public ciblé</label>
+<input type="text" name="public">
+
+<div class="buttons">
+
+<button type="button" class="prev">Retour</button>
+<button type="button" class="next">Suivant</button>
+
+</div>
+
+</div>
+
+
+<!-- STEP 4 -->
+<div class="step">
+
+<h2>Design souhaité</h2>
+
+<label>Couleurs préférées</label>
+<input type="text" name="couleurs">
+
+<label>Sites web que vous aimez</label>
+<textarea name="exemples"></textarea>
+
+<div class="buttons">
+
+<button type="button" class="prev">Retour</button>
+<button type="submit">Envoyer</button>
+
+</div>
+
+</div>
+
+</form>
 
 </div>
 
